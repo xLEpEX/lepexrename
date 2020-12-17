@@ -19,7 +19,7 @@ public class BotLEpEX {
 	private static TeamController teamcr = new TeamController();
 		
 	public static void main(String[] args) {
-		JDABuilder builder = new JDABuilder("NjYwNTYzNDgxMzU0OTYwOTA3.XwtP9w.wp4ubrbCgfTBdEqI6KrhfxWf1Hk"); 
+		JDABuilder builder = new JDABuilder("TOKEN"); 
 		builder.setActivity(Activity.playing("!rename help | support: dPtaFtN"));
 		builder.addEventListeners(new MyJoinListener(mySQLManager, myEmbuildBuilder));
 	    builder.addEventListeners(new MyListener(mySQLManager, myEmbuildBuilder, settingscr, actioncr, teamcr));
