@@ -19,7 +19,6 @@ import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.events.role.RoleDeleteEvent;
 import net.dv8tion.jda.api.exceptions.InsufficientPermissionException;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
-import net.lepexnetwork.botblock.APIPostInformationSystem;
 import net.lepexnetwork.controll.ActionController;
 import net.lepexnetwork.controll.SettingsController;
 import net.lepexnetwork.controll.TeamController;
@@ -30,7 +29,6 @@ public class MyListener extends ListenerAdapter {
 	private ActionController actioncr;
 	private TeamController teamcr;
 	private MyEmbuildBuilder em;
-	private static APIPostInformationSystem apipostsys = null;
 	private MySQLManager mysql;
 
 	private SettingsController settingscr;
@@ -68,7 +66,7 @@ public class MyListener extends ListenerAdapter {
 					this.em.sendErrSystem(emm, null, event.getChannel());
 				}
 			} else if (contentRaw.startsWith("!lepex post Bot Data") && event.getAuthor().getId().equalsIgnoreCase("276756997695602700") && event.getChannel().getId().equalsIgnoreCase("733612423654932551")) {
-				apipostsys = new APIPostInformationSystem(event.getJDA());
+				//apipostsys = new APIPostInformationSystem(event.getJDA());
 			}
 			try {
 				if (contentRaw.startsWith(this.mysql.getPrefix(guildID)+ "rename")) {
